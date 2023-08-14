@@ -1,0 +1,49 @@
+<app-loan-application></app-loan-application>
+<div class="card my-5">
+    <div class="card-body">
+      <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <!-- <th scope="col"></th> -->
+            <th scope="col">Address of Property</th>
+            <th scope="col">Loan Amount</th>
+            <th scope="col">Tenure</th>
+            <th scope="col">Monthly Salary</th>
+            <th scope="col">Status</th>
+            <th scope="col">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of loanReq">
+            <!-- <td>{{ user.userId}}</td> -->
+            <td>{{ user.propertyAddress }}</td>
+            <!-- <td><a href="mailto:{{ user.email }}">{{ user.email }}</a></td> -->
+            <td>{{user.loanAmount}}</td>
+            <td>{{user.loanTenure}}</td>
+            <td>{{user.salary}}</td>
+            <td>{{user.status}}</td>
+            <td>
+              <!-- <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
+                  <button type="button" (click)="onEditing()" class="btn btn-primary">Edit</button> -->
+                  <button type="button" (click)="onDeleting(user.loanrequestId)" class="btn btn-primary my-2">Delete</button>
+                <!-- </div> -->
+            </td>
+            <!-- <td> -->
+              <!-- <div>
+                <button type="button" (click)=updateData() class="btn btn-secondary btn-sm">Update</button>
+                <button type="button" (click)=deleteData(user) class="btn btn-danger btn-sm">Delete</button> -->
+                <!-- <button type="button" class="btn btn-success btn-sm">Success</button> -->
+              <!-- </div> -->
+            <!-- </td> -->
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- userId! : string;
+  description! : string;
+  amount! : number;
+  tenure! : number;
+  salary! : number;
+  status! : string; -->

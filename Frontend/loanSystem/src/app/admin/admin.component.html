@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card bg-dark my-5">
+          <div class="card-body">
+            <h3 class="card-title text-center text-white py-3">{{ title }}</h3>
+            <ul class="text-center list-inline py-3">
+              <li class="list-inline-item">
+                <a routerLink="/admin/loanrequestList" class="btn btn-info">All Appliations</a>
+                  </li>
+              <!-- <li class="list-inline-item">
+                <a routerLink="/adduser" class="btn btn-info">Apply for Loan</a>
+                  </li>
+              <li class="list-inline-item">
+                <a routerLink="/adduser" class="btn btn-info">Apply for Loan</a>
+                  </li> -->
+            </ul>
+          </div>
+        </div>
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,102 @@
+<app-loan-application></app-loan-application>
+<div class="container">
+    <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark"> -->
+    <!-- <a class="navbar-brand mx-3" href="#">Loan Application</a> -->
+    <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button> -->
+  
+    <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Dropdown
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#">Disabled</a>
+        </li>
+      </ul>
+      
+    </div> -->
+  <!-- </nav> -->
+
+  <div class="container">
+  <form class="my-4" (ngSubmit)="onSubmit(clientDetails)" #userForm="ngForm">
+
+      <!-- <div class="form-group my-2">
+        <label for="userId">User Id</label>
+        <input type="text" class="form-control" id="userId" placeholder="User ID" [(ngModel)]="clientDetails.userId" name="userId">
+        </div>   -->
+      <div class="form-group my-2">
+          <label for="loanAmount">Loan Amount</label>
+          <input type="text" class="form-control" id="loanAmount" placeholder="Amount of Loan" [(ngModel)]="clientDetails.loanAmount" name="loanAmount">
+          <!-- <input type="number" class="form-control" [placeholder]="showPlaceholder ? 'Enter a number' : ''" [(ngModel)]="clientDetails.loanAmount" (input)="onInput()" (focus)="onFocus()" (blur)="onBlur()"> -->
+        </div>
+        <div class="form-group my-2">
+            <label for="loanTenure">Tenure</label>
+            <input type="text" class="form-control" id="loanTenure" placeholder="Tenure of Loan in Years" [(ngModel)]="clientDetails.loanTenure" name="loanTenure">
+        </div>
+        <div class="form-group my-2">
+            <label for="salary">Monthly Salary</label>
+            <input type="text" class="form-control" id="salary" placeholder="Net Montly Salary" [(ngModel)]="clientDetails.salary" name="salary">
+        </div>
+        <div class="form-group my-2">
+            <label for="propertyAddress">Property Info</label>
+            <textarea class="form-control" id="propertyAddress" rows="2" placeholder="Description / address of property" [(ngModel)]="clientDetails.propertyAddress" name="propertyAddress"></textarea>
+          </div>
+          <!-- <div class="mb-3">
+            <label for="formFile" class="form-label">Image of Property</label>
+            <input class="form-control" type="file" id="formFile">
+          </div> -->
+          <button type="submit"  class="btn btn-dark">Submit</button>
+    <!-- <div class="form-group">
+      <label for="exampleFormControlInput1">Email address</label> 
+      <input type="email" class="form-control" id="MontlySa" placeholder="name@example.com">
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlSelect1">Example select</label>
+      <select class="form-control" id="exampleFormControlSelect1">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlSelect2">Example multiple select</label>
+      <select multiple class="form-control" id="exampleFormControlSelect2">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlTextarea1">Example textarea</label>
+      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    </div> -->
+  </form>
+  </div>
+
+  <!-- <app-display-list></app-display-list> -->
+
+
+
+  </div>
+
+  

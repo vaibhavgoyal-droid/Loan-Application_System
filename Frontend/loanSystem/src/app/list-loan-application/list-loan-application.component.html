@@ -1,0 +1,66 @@
+<div class="card my-5">
+    <nav>
+        <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="card bg-dark my-5">
+                  <div class="card-body">
+                    <h2 class="card-title text-center text-white py-3">Loan Application</h2>
+                  </div>
+                </div>
+                <router-outlet></router-outlet>
+              </div>
+            </div>
+          </div>
+    </nav>
+    <div class="card-body">
+      <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <!-- <th scope="col"></th> -->
+            <th scope="col">Address of Property</th>
+            <th scope="col">Loan Amount</th>
+            <th scope="col">Tenure</th>
+            <th scope="col">Monthly Salary</th>
+            <!-- <th scope="col">Status</th> -->
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of loanReq" >
+            <ng-container *ngIf= "user.status==='pending'">
+            <!-- <td>{{ user.userId}}</td> -->
+            <td>{{ user.propertyAddress }}</td>
+            <!-- <td><a href="mailto:{{ user.email }}">{{ user.email }}</a></td> -->
+            <td>{{user.loanAmount}}</td>
+            <td>{{user.loanTenure}}</td>
+            <td>{{user.salary}}</td>
+            <!-- <td>{{user.status}}</td> -->
+            <td>
+                <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
+                    <button type="button" (click)="onAccepting(user.loanrequestId)" class="btn btn-primary">Accept</button>
+                    <button type="button" (click)="onRejecting(user.loanrequestId)" class="btn btn-primary my-2">Reject</button>
+                  </div>
+            </td>
+        </ng-container>
+
+
+            <!-- <td> -->
+              <!-- <div>
+                <button type="button" (click)=updateData() class="btn btn-secondary btn-sm">Update</button>
+                <button type="button" (click)=deleteData(user) class="btn btn-danger btn-sm">Delete</button> -->
+                <!-- <button type="button" class="btn btn-success btn-sm">Success</button> -->
+              <!-- </div> -->
+            <!-- </td> -->
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- userId! : string;
+  description! : string;
+  amount! : number;
+  tenure! : number;
+  salary! : number;
+  status! : string; -->

@@ -1,0 +1,42 @@
+<app-loan-application></app-loan-application>
+<div class="card my-5">
+    <div class="card-body">
+      <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+            <tr>
+                <!-- <th scope="col"></th> -->
+                <th scope="col">Total Amount</th>
+                <th scope="col">Remaining Amount</th>
+                <th scope="col">Time Left</th>
+                <th scope="col">Monthly EMI</th>
+                <!-- <th scope="col">Status</th> -->
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let user of loans">
+                <!-- <td>{{ user.userId}}</td> -->
+                <td>{{ user.totalPA }}</td>
+                <!-- <td><a href="mailto:{{ user.email }}">{{ user.email }}</a></td> -->
+                <td>{{user.remainingPA}}</td>
+                <td>{{user.remainingTime}}</td>
+                <td>{{user.monthlyEMI}}</td>
+                <!-- <td>{{user.status}}</td> -->
+                <!-- <td> -->
+                  <!-- <div>
+                    <button type="button" (click)=updateData() class="btn btn-secondary btn-sm">Update</button>
+                    <button type="button" (click)=deleteData(user) class="btn btn-danger btn-sm">Delete</button> -->
+                    <!-- <button type="button" class="btn btn-success btn-sm">Success</button> -->
+                  <!-- </div> -->
+                <!-- </td> -->
+              </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- userId! : string;
+  description! : string;
+  amount! : number;
+  tenure! : number;
+  salary! : number;
+  status! : string; -->
